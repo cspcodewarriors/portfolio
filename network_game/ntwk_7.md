@@ -1,7 +1,6 @@
 ---
 permalink: /network/7
 ---
-
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
