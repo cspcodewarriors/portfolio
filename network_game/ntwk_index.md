@@ -30,13 +30,13 @@ permalink: /network/home
 <h1>NETWORK STACK<br/>ESCAPE ROOM</h1>
 <p class="sub">Help <strong style="color:#fbbf24">Mailman Max</strong> deliver packets from <strong style="color:#60a5fa">GitHub Pages</strong> to <strong style="color:#4ade80">AWS EC2 Flask</strong> through all 7 OSI layers!</p>
 <div class="grid">
-  <a class="card" href="level1.html"><div class="icon">🔌</div><div class="lnum">LEVEL 1</div><div class="lname">Wire the Network</div><div class="layer">OSI Layer 1 · Physical</div></a>
-  <a class="card" href="level2.html"><div class="icon">📦</div><div class="lnum">LEVEL 2</div><div class="lname">Build the Frame</div><div class="layer">OSI Layer 2 · Data Link</div></a>
-  <a class="card" href="level3.html"><div class="icon">🏬</div><div class="lnum">LEVEL 3</div><div class="lname">Route the Packets</div><div class="layer">OSI Layer 3 · Network</div></a>
-  <a class="card" href="level4.html"><div class="icon">🔪</div><div class="lnum">LEVEL 4</div><div class="lname">Slice at the MTU</div><div class="layer">OSI Layer 4 · Transport</div></a>
-  <a class="card" href="level5.html"><div class="icon">📡</div><div class="lnum">LEVEL 5</div><div class="lname">TCP Handshake</div><div class="layer">OSI Layer 5 · Session</div></a>
-  <a class="card" href="level6.html"><div class="icon">🎁</div><div class="lnum">LEVEL 6</div><div class="lname">Wrap with TLS</div><div class="layer">OSI Layer 6 · Presentation</div></a>
-  <a class="card" href="level7.html"><div class="icon">🚗</div><div class="lnum">LEVEL 7</div><div class="lname">Neighborhood Delivery</div><div class="layer">OSI Layer 7 · Application</div></a>
+  <a class="card" href="/portfolio/network/1"><div class="icon">🔌</div><div class="lnum">LEVEL 1</div><div class="lname">Wire the Network</div><div class="layer">OSI Layer 1 · Physical</div></a>
+  <a class="card" href="/portfolio/network/2"><div class="icon">📦</div><div class="lnum">LEVEL 2</div><div class="lname">Build the Frame</div><div class="layer">OSI Layer 2 · Data Link</div></a>
+  <a class="card" href="/portfolio/network/3"><div class="icon">🏬</div><div class="lnum">LEVEL 3</div><div class="lname">Route the Packets</div><div class="layer">OSI Layer 3 · Network</div></a>
+  <a class="card" href="/portfolio/network/4"><div class="icon">🔪</div><div class="lnum">LEVEL 4</div><div class="lname">Slice at the MTU</div><div class="layer">OSI Layer 4 · Transport</div></a>
+  <a class="card" href="/portfolio/network/5"><div class="icon">📡</div><div class="lnum">LEVEL 5</div><div class="lname">TCP Handshake</div><div class="layer">OSI Layer 5 · Session</div></a>
+  <a class="card" href="/portfolio/network/6"><div class="icon">🎁</div><div class="lnum">LEVEL 6</div><div class="lname">Wrap with TLS</div><div class="layer">OSI Layer 6 · Presentation</div></a>
+  <a class="card" href="/portfolio/network/7"><div class="icon">🚗</div><div class="lnum">LEVEL 7</div><div class="lname">Neighborhood Delivery</div><div class="layer">OSI Layer 7 · Application</div></a>
 </div>
 <a href="level1.html"><button class="start">🚚 START DELIVERING</button></a>
 </body>
