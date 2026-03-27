@@ -1,5 +1,5 @@
 ---
-permalimk: /network/3
+permalink: /network/3
 ---
 
 <html lang="en">
