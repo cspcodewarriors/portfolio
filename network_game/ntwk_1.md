@@ -81,7 +81,7 @@ permalink: /network/1
     <div class="win" id="win-banner">
       <div style="font-size:28px">🎉</div>
       <h3>All cables connected! Signals are flowing!</h3>
-      <a href="level2.html"><button class="btn">Next Level →</button></a>
+      <a href="/portfolio/network/2"><button class="btn">Next Level →</button></a>
     </div>
   </div>
 </div>

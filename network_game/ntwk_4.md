@@ -94,7 +94,7 @@ permalink: /network/4
     <div class="win" id="win-banner">
       <div style="font-size:28px">🎉</div>
       <h3 id="win-msg">Sliced! TCP segmentation done!</h3>
-      <a href="level5.html"><button class="btn">Next Level →</button></a>
+      <a href="/portfolio/network/5"><button class="btn">Next Level →</button></a>
     </div>
   </div>
 </div>

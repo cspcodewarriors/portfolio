@@ -129,7 +129,7 @@ permalink: /network/6
     <div class="win" id="win-banner">
       <div style="font-size:28px">🎉</div>
       <h3>Package encrypted and certified! HTTPS ready!</h3>
-      <a href="level7.html"><button class="btn">Next Level →</button></a>
+      <a href="/portfolio/network/7"><button class="btn">Next Level →</button></a>
     </div>
   </div>
 </div>
