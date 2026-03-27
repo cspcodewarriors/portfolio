@@ -59,7 +59,7 @@ permalink: /network/1
   <div class="card">
     <div class="osi-badge">OSI Layer 1 / TCP-IP: Physical</div>
     <h2>🔌 Level 1 — Wire the Network</h2>
-    <p class="flavor">Drag from a colored port to its matching device — like Among Us wiring!</p>
+    <p class="flavor">Drag from a colored port to its matching device!</p>
     <div id="game-area">
       <svg id="wires"></svg>
       <div class="columns">
