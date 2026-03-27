@@ -60,7 +60,7 @@ permalink: /network/5
     <a href="/portfolio/network/5" class="active">L5</a>
     <a href="/portfolio/network/6">L6</a><a href="/portfolio/network/7">L7</a>
   </div>
-  <a href="index.html" class="home-btn">🏠</a>
+  <a href="/portfolio/network/home" class="home-btn">🏠</a>
 </div>
 <div class="wrapper">
   <div class="card">

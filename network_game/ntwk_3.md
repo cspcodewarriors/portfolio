@@ -47,7 +47,7 @@ permalink: /network/3
     <a href="/portfolio/network/3" class="active">L3</a>
     <a href="/portfolio/network/4">L4</a><a href="/portfolio/network/5">L5</a><a href="/portfolio/network/6">L6</a><a href="/portfolio/network/7">L7</a>
   </div>
-  <a href="index.html" class="home-btn">🏠</a>
+  <a href="/portfolio/network/home" class="home-btn">🏠</a>
 </div>
 <div class="wrapper">
   <div class="card">

@@ -38,6 +38,6 @@ permalink: /network/home
   <a class="card" href="/portfolio/network/6"><div class="icon">🎁</div><div class="lnum">LEVEL 6</div><div class="lname">Wrap with TLS</div><div class="layer">OSI Layer 6 · Presentation</div></a>
   <a class="card" href="/portfolio/network/7"><div class="icon">🚗</div><div class="lnum">LEVEL 7</div><div class="lname">Neighborhood Delivery</div><div class="layer">OSI Layer 7 · Application</div></a>
 </div>
-<a href="level1.html"><button class="start">🚚 START DELIVERING</button></a>
+<a href="/portfolio/network/1"><button class="start">🚚 START DELIVERING</button></a>
 </body>
 </html>

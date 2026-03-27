@@ -99,7 +99,7 @@ permalink: /network/2/
       <a href="/portfolio/network/6">L6</a>
       <a href="/portfolio/network/7">L7</a>
     </div>
-    <a href="index.html" class="ner-home">🏠</a>
+    <a href="/portfolio/network/home" class="ner-home">🏠</a>
   </div>
 
   <div class="ner-wrapper">

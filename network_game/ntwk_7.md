@@ -47,7 +47,7 @@ permalink: /network/7
     <a href="/portfolio/network/4">L4</a><a href="/portfolio/network/5">L5</a><a href="/portfolio/network/6">L6</a>
     <a href="/portfolio/network/7" class="active">L7</a>
   </div>
-  <a href="index.html" class="home-btn">🏠</a>
+  <a href="/portfolio/network/home" class="home-btn">🏠</a>
 </div>
 <div class="wrapper">
   <div class="card">
@@ -71,7 +71,7 @@ permalink: /network/7
     <div class="win" id="win-banner">
       <div style="font-size:28px">🏆</div>
       <h3>Full HTTP cycle complete! Network Stack mastered!</h3>
-      <a href="index.html"><button class="btn">🔄 Play Again</button></a>
+      <a href="/portfolio/network/home"><button class="btn">🔄 Play Again</button></a>
     </div>
   </div>
 </div>
