@@ -51,18 +51,20 @@ permalink: /network/3
 </div>
 <div class="wrapper">
   <div class="card">
-    <div class="osi-badge">OSI Layer 3 / TCP-IP: Network (Internet)</div>
+    <div class="osi-badge">OSI Layer 3 · Network | TCP/IP Layer 2: Internet</div>
     <h2>🏬 Level 3 — Route the Packets!</h2>
-    <p class="flavor"><b>WASD</b> to walk · <b>E</b> to pick up / throw to nearest bin</p>
+    <p class="flavor"><b>WASD</b> to walk · <b>E</b> to pick up / throw to nearest bin. OSI calls this the "Network" layer; TCP/IP calls it the "Internet" layer — same job, different name.</p>
     <div id="msg">WASD to walk • E to pick up/throw</div>
     <div id="canvas-wrap"><canvas id="gc" width="640" height="380"></canvas></div>
     <div class="status-row" id="status-row"></div>
     <details class="facts">
       <summary>📚 Network Facts ▼</summary>
       <ul>
-        <li>IP routing decides which network each packet belongs to.</li>
-        <li>3.233.212.71 is the real AWS EC2 IP for flask.opencodingsociety.com.</li>
-        <li>Private IPs (10.x, 192.168.x) never leave the local network.</li>
+        <li><b>OSI Layer 3 (Network)</b> = IP addressing and routing. <b>TCP/IP Layer 2</b> calls this same layer the "Internet" layer — it's the same concept with different labels.</li>
+        <li>IP routing decides which network each packet belongs to based on destination IP.</li>
+        <li>3.233.212.71 is the public IP for the AWS EC2 instance running flask.opencodingsociety.com.</li>
+        <li>Private IPs (10.x, 172.16.x, 192.168.x) never route over the public internet — they exist only inside a local network or VPC.</li>
+        <li><b>Deployment angle:</b> When you deploy to AWS, you assign your EC2 instance a public IP (or Elastic IP). Inside the VPC, services talk on private IPs (10.0.0.x). Security groups and route tables at this layer control what traffic can reach your Flask server.</li>
       </ul>
     </details>
     <div class="win" id="win-banner">

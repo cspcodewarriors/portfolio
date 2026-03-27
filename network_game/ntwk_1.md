@@ -57,9 +57,9 @@ permalink: /network/1
 </div>
 <div class="wrapper">
   <div class="card">
-    <div class="osi-badge">OSI Layer 1 / TCP-IP: Physical</div>
+    <div class="osi-badge">OSI Layer 1 · Physical | TCP/IP Layer 1: Network Access (bottom half)</div>
     <h2>🔌 Level 1 — Wire the Network</h2>
-    <p class="flavor">Drag from a colored port to its matching device!</p>
+    <p class="flavor">Drag from a colored port to its matching device! In OSI there are 7 layers; TCP/IP collapses OSI L1+L2 into one "Network Access" layer.</p>
     <div id="game-area">
       <svg id="wires"></svg>
       <div class="columns">
@@ -73,9 +73,10 @@ permalink: /network/1
     <details class="facts">
       <summary>📚 Network Facts ▼</summary>
       <ul>
-        <li>Physical layer = raw bits as electrical/optical/radio signals.</li>
-        <li>Ethernet max frame = 1518 bytes — origin of MTU.</li>
-        <li>GitHub Pages uses Wi-Fi; AWS EC2 runs on fiber in the datacenter.</li>
+        <li><b>OSI Layer 1 (Physical)</b> = raw bits as electrical/optical/radio signals.</li>
+        <li><b>TCP/IP</b> merges OSI L1 (Physical) + L2 (Data Link) into one "Network Access" layer — 7 OSI layers collapse to 5 in TCP/IP (or 4 in the classic 4-layer model).</li>
+        <li>Ethernet max frame = 1518 bytes — this hardware limit is the origin of MTU, which constrains every layer above.</li>
+        <li><b>Deployment angle:</b> GitHub Pages runs on Fastly CDN over fiber; your laptop connects via Wi-Fi. AWS EC2 sits in a datacenter on 100 Gbps fiber uplinks. Choosing a cloud region closer to users reduces physical signal latency.</li>
       </ul>
     </details>
     <div class="win" id="win-banner">

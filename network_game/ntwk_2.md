@@ -104,9 +104,9 @@ permalink: /network/2/
 
   <div class="ner-wrapper">
     <div class="ner-card">
-      <div class="ner-badge">OSI Layer 2 / TCP-IP: Network Access</div>
+      <div class="ner-badge">OSI Layer 2 · Data Link | TCP/IP Layer 1: Network Access (top half)</div>
       <h2>📦 Level 2 — Build the Ethernet Frame</h2>
-      <p class="ner-flavor">Type the correct values, drag the IP packet into the payload slot, then compute the CRC to seal the frame!</p>
+      <p class="ner-flavor">Type the correct values, drag the IP packet into the payload slot, then compute the CRC to seal the frame! OSI names this the "Data Link" layer; TCP/IP bundles it with Physical into "Network Access."</p>
 
       <div class="ner-layout">
         <!-- SIDEBAR -->
@@ -189,9 +189,10 @@ permalink: /network/2/
       <details class="ner-facts">
         <summary>📚 Network Facts ▼</summary>
         <ul>
-          <li>Ethernet frame = 14B header + payload (≤1500B) + 4B CRC = 1518B max.</li>
-          <li>CRC detects bit errors in transit — like a tamper-proof seal.</li>
+          <li><b>OSI Layer 2 (Data Link)</b> handles MAC addresses and frames; <b>TCP/IP</b> combines this with the Physical layer into a single "Network Access" layer.</li>
+          <li>Ethernet frame = 14B header + payload (≤1500B) + 4B CRC = 1518B max. CRC detects bit errors in transit.</li>
           <li>EtherType 0x0800 = IPv4. 0x86DD = IPv6. 0x0806 = ARP.</li>
+          <li><b>Deployment angle:</b> Inside an AWS VPC, traffic between EC2 instances travels over Ethernet frames with private MAC addresses. When you deploy Nginx and Flask on the same host, their communication never leaves the machine — no frames needed, just localhost loopback.</li>
         </ul>
       </details>
 

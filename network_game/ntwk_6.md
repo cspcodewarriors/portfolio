@@ -76,9 +76,9 @@ permalink: /network/6
 </div>
 <div class="wrapper">
   <div class="card">
-    <div class="osi-badge">OSI Layer 6 (Presentation) / TCP-IP: Application</div>
+    <div class="osi-badge">OSI Layer 6 · Presentation | TCP/IP Layer 4: Application (TLS lives here)</div>
     <h2>🎁 Level 6 — Wrap with TLS!</h2>
-    <p class="flavor">Hold the <b>WRAP</b> button to apply each TLS layer around the HTTP package.</p>
+    <p class="flavor">Hold the <b>WRAP</b> button to apply each TLS layer around the HTTP package. OSI has a dedicated "Presentation" layer (L6) for encryption/encoding; TCP/IP merges L5+L6+L7 into one Application layer.</p>
     <div class="layout">
       <div class="box-side">
         <div style="font-size:12px;color:#6b7280;margin-bottom:8px;">Package Preview</div>
@@ -120,10 +120,11 @@ permalink: /network/6
     <details class="facts">
       <summary>📚 Network Facts ▼</summary>
       <ul>
-        <li>TLS 1.3 (Certbot/Let's Encrypt) wraps HTTP into HTTPS on port 443.</li>
-        <li>AES-256-GCM encrypts payload; HMAC ensures tamper detection.</li>
-        <li>Nginx handles TLS termination — Flask :8587 only sees plaintext.</li>
-        <li>SNI lets one server host many HTTPS domains.</li>
+        <li><b>OSI Layer 6 (Presentation)</b> handles encryption, encoding, and data format translation. <b>TCP/IP</b> has no separate presentation layer — TLS, encoding, and compression are handled inside the Application layer.</li>
+        <li>TLS 1.3 (via Certbot/Let's Encrypt) wraps HTTP into HTTPS on port 443. AES-256-GCM encrypts the payload; HMAC ensures tamper detection.</li>
+        <li>Nginx handles TLS termination — it decrypts the HTTPS traffic and passes plaintext HTTP to Flask :8587. Flask never sees TLS.</li>
+        <li>SNI (Server Name Indication) lets one IP address host many HTTPS domains — critical for shared cloud hosting.</li>
+        <li><b>Deployment angle:</b> Running <code>certbot --nginx</code> on your EC2 instance auto-configures Nginx with a free Let's Encrypt TLS certificate. Without TLS, browsers block API calls from HTTPS pages to HTTP endpoints (mixed-content policy) — so HTTPS is required for any deployed frontend that calls your Flask backend.</li>
       </ul>
     </details>
     <div class="win" id="win-banner">

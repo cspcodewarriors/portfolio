@@ -62,9 +62,9 @@ permalink: /network/4
 </div>
 <div class="wrapper">
   <div class="card">
-    <div class="osi-badge">OSI Layer 4 / TCP-IP: Transport</div>
+    <div class="osi-badge">OSI Layer 4 · Transport | TCP/IP Layer 3: Transport</div>
     <h2>🔪 Level 4 — Slice at the MTU!</h2>
-    <p class="flavor">Press <b>SPACE</b> or CHOP when the knife hits a color boundary (= 1460B). MTU = 1500B, TCP payload = 1460B.</p>
+    <p class="flavor">Press <b>SPACE</b> or CHOP when the knife hits a color boundary (= 1460B). MTU = 1500B, TCP payload = 1460B. Both OSI and TCP/IP share this layer — it's called "Transport" in both models.</p>
     <div id="game-wrap">
       <div id="bar-container">
         <div id="bar">
@@ -86,9 +86,10 @@ permalink: /network/4
     <details class="facts">
       <summary>📚 Network Facts ▼</summary>
       <ul>
-        <li>MTU = 1500B max. TCP payload = 1500 - 20 (IP) - 20 (TCP) = 1460B.</li>
-        <li>TCP sequence numbers let the receiver reassemble in order.</li>
-        <li>Nginx on AWS EC2 reassembles all segments into the full HTTP request.</li>
+        <li><b>OSI Layer 4 (Transport)</b> and <b>TCP/IP Layer 3 (Transport)</b> are the same — one of the few layers both models agree on by name.</li>
+        <li>MTU = 1500B max. TCP payload = 1500 − 20B (IP header) − 20B (TCP header) = 1460B per segment.</li>
+        <li>TCP sequence numbers let the receiver reassemble out-of-order segments. UDP skips this — faster but no reassembly guarantee.</li>
+        <li><b>Deployment angle:</b> Nginx on AWS EC2 reassembles all TCP segments before passing the full HTTP request to Flask. Misconfigured MTU between cloud regions can cause silent packet drops — a common deployment debugging problem. Setting <code>net.ipv4.tcp_mtu_probing=1</code> in Linux lets the OS auto-discover the correct MTU.</li>
       </ul>
     </details>
     <div class="win" id="win-banner">

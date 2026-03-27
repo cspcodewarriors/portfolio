@@ -64,9 +64,9 @@ permalink: /network/5
 </div>
 <div class="wrapper">
   <div class="card">
-    <div class="osi-badge">OSI L4+L5 / TCP-IP: Transport + Session</div>
+    <div class="osi-badge">OSI Layer 5 · Session (+ L4 Transport) | TCP/IP Layer 3: Transport</div>
     <h2>📡 Level 5 — TCP Handshake Arcade!</h2>
-    <p class="flavor">Click <b>SEND</b> to fire each packet, then answer the quiz before the next one flies!</p>
+    <p class="flavor">Click <b>SEND</b> to fire each packet, then answer the quiz before the next one flies! OSI has a separate "Session" layer (L5); TCP/IP folds session management directly into the Transport layer.</p>
     <div id="arena">
       <div class="actor" style="left:36px" id="actor-client">
         <div class="emoji">💻</div>
@@ -96,9 +96,10 @@ permalink: /network/5
     <details class="facts">
       <summary>📚 Network Facts ▼</summary>
       <ul>
-        <li>TCP 3-way handshake: SYN→SYN-ACK→ACK before data flows.</li>
-        <li>Nginx :443 handles TLS; proxies internally to Flask :8587.</li>
-        <li>OSI Session Layer (L5) manages dialogues; folded into TCP/IP Transport.</li>
+        <li>TCP 3-way handshake: SYN → SYN-ACK → ACK before any data flows. This is OSI L5 (Session) behavior implemented inside TCP, which lives at OSI L4 / TCP/IP L3.</li>
+        <li><b>OSI vs TCP/IP:</b> OSI defines a dedicated Session layer (L5) for connection management. TCP/IP has no separate session layer — TCP itself handles session setup and teardown, collapsing OSI L4+L5 into one Transport layer.</li>
+        <li>Nginx :443 handles the TLS session and TCP connection; it proxies the decrypted request internally to Flask :8587 over a new local TCP session.</li>
+        <li><b>Deployment angle:</b> Every <code>fetch()</code> call from GitHub Pages triggers a full TCP handshake to your EC2 instance. HTTP/2 and HTTP/3 reduce overhead by multiplexing many requests over a single TCP (or QUIC) session — an important deployment optimization for API-heavy frontends.</li>
       </ul>
     </details>
     <div class="win" id="win-banner">

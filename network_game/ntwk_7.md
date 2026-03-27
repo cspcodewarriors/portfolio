@@ -51,9 +51,9 @@ permalink: /network/7
 </div>
 <div class="wrapper">
   <div class="card">
-    <div class="osi-badge">OSI Layer 7 / TCP-IP: Application (HTTP, DNS, HTTPS)</div>
+    <div class="osi-badge">OSI Layer 7 · Application | TCP/IP Layer 4: Application (HTTP, DNS, HTTPS)</div>
     <h2>🚗 Level 7 — Neighborhood Delivery!</h2>
-    <p class="flavor"><b>WASD</b> to drive on roads. <b>E</b> near 📮 to pick up. <b>E</b> near 🏠 to deliver.</p>
+    <p class="flavor"><b>WASD</b> to drive on roads. <b>E</b> near 📮 to pick up. <b>E</b> near 🏠 to deliver. This is the top layer of both OSI and TCP/IP — where HTTP, DNS, and your deployed app actually live.</p>
     <div id="msg-bar">Drive with WASD! Press E near 📮 to pick up, press E near 🏠 to deliver!</div>
     <div id="canvas-wrap">
       <canvas id="gc" width="680" height="460"></canvas>
@@ -63,9 +63,11 @@ permalink: /network/7
     <details class="facts">
       <summary>📚 Network Facts ▼</summary>
       <ul>
-        <li>DNS resolves flask.opencodingsociety.com → 3.233.212.71 first.</li>
-        <li>Nginx :443 (public) proxies to Flask :8587 (private).</li>
-        <li>HTTP GET /api/users → SQL SELECT → JSON → HTTPS back to GitHub Pages.</li>
+        <li><b>OSI Layer 7 (Application)</b> = protocols users and apps interact with: HTTP, HTTPS, DNS, FTP, SMTP. <b>TCP/IP Layer 4 (Application)</b> covers the same space and also absorbs OSI L5 (Session) and L6 (Presentation) — so TLS and session management are all "Application" in TCP/IP.</li>
+        <li>DNS resolves flask.opencodingsociety.com → 3.233.212.71 before any HTTP request can be sent. Without DNS, you'd have to hard-code IPs.</li>
+        <li>Nginx :443 (public) proxies to Flask :8587 (private). This reverse-proxy pattern is standard in almost every production deployment.</li>
+        <li>HTTP GET /api/users → Flask → SQL SELECT → JSON → HTTPS response back to GitHub Pages.</li>
+        <li><b>Deployment angle:</b> The full stack you deploy: GitHub Pages serves your static frontend (L7/Application). Your domain's DNS A record points to the EC2 Elastic IP (L7/Application via DNS). Nginx terminates TLS and routes requests (L6+L7). Flask runs your backend logic (L7). The SQL database sits on a private IP, never exposed to the internet (L3 routing policy). Every deployment decision maps to a layer in the network model.</li>
       </ul>
     </details>
     <div class="win" id="win-banner">
