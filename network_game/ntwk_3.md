@@ -43,9 +43,9 @@ permalimk: /network/3
 <div class="header">
   <span class="logo">📬 Network Escape Room</span>
   <div class="nav-links">
-    <a href="level1.html">L1</a><a href="level2.html">L2</a>
-    <a href="level3.html" class="active">L3</a>
-    <a href="level4.html">L4</a><a href="level5.html">L5</a><a href="level6.html">L6</a><a href="level7.html">L7</a>
+    <a href="/portfolio/network/1">L1</a><a href="/portfolio/network/2">L2</a>
+    <a href="/portfolio/network/3" class="active">L3</a>
+    <a href="/portfolio/network/4">L4</a><a href="/portfolio/network/5">L5</a><a href="/portfolio/network/6">L6</a><a href="/portfolio/network/7">L7</a>
   </div>
   <a href="index.html" class="home-btn">🏠</a>
 </div>
